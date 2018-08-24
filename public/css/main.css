@@ -1,0 +1,98 @@
+header{
+	background: blue;
+}
+*{
+	box-sizing: border-box;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+main{
+	max-width: 600px;
+	width: 100%;
+	margin: 0 auto;
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 70px auto 10% 30px;
+	grid-template-areas: 	"title name" 
+							"chat chat" 
+							"message message" 
+							"send send";
+}
+h1{
+	grid-area: title;
+}
+#usernameContainer, #myMessageContainer{
+	width: 100%;
+	height: 100%;
+}
+#usernameContainer{
+	grid-area: name;
+	justify-self: center;
+	align-self: center;
+	
+}
+	
+#username{
+	display: block;
+	border: 1px solid black;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	border-bottom: 0;
+	font-size: 2em;
+	font-weight: 600;
+}
+#btn{
+	grid-area: send;
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+#btn.ready{
+	background: blue;
+}
+#myMessageContainer{
+	grid-area: message;
+}
+#myMessage{
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 1px solid black;
+	padding: 5px;
+	font-size: 1.3em;
+	border-top: 0;
+}
+#messages{
+	grid-area: chat;
+	display: block;
+	height: 100%;
+	border: 1px solid black;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.message{
+	display: block;
+	float: left;
+	clear: both;
+	background: #777;
+	border-radius: 20px;
+	padding: 10px;
+	min-width: 200px;
+}
+.me{
+	background: blue;
+	float: right;
+
+}
+.handle{
+	font-size: 1.2em;
+	font-weight: 800;
+
+}
+.text{
+	
+}
