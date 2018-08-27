@@ -1,5 +1,5 @@
 // make connection
-var socket = io.connect('http://localhost:3000');
+var socket = io.connect('http://192.168.0.104:3000');
 
 // Get saved data from sessionStorage
 var storedUsername = sessionStorage.getItem('username');
